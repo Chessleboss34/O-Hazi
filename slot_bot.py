@@ -55,8 +55,8 @@ async def on_ready():
 
     # Définir l'activité du bot
     activity = discord.Activity(
-        type=discord.ActivityType.watching,  # watching / playing / listening / streaming
-        name="by 709"
+        type=discord.ActivityType.streaming,  # watching / playing / listening / streaming
+        name="by 709\nhttps://guns.lol/chessito_"
     )
     await bot.change_presence(status=discord.Status.online, activity=activity)
 
