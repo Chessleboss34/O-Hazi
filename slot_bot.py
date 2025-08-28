@@ -53,10 +53,10 @@ async def on_ready():
     except Exception as e:
         print(f"Erreur sync: {e}")
 
-    # Définir l'activité du bot
-    activity = discord.Activity(
-        type=discord.ActivityType.streaming,  # watching / playing / listening / streaming
-        name="by 709\nhttps://guns.lol/chessito_"
+    # Définir l'activité du bot en streaming (avec lien guns.lol cliquable)
+    activity = discord.Streaming(
+        name="by 709",
+        url="https://guns.lol/chessito_"  # lien cliquable affiché comme "Regarder"
     )
     await bot.change_presence(status=discord.Status.online, activity=activity)
 
