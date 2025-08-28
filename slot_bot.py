@@ -12,7 +12,7 @@ load_dotenv()
 token = os.getenv("DISCORD_TOKEN")
 
 # ---------------- CONFIG ----------------
-CATEGORY_ID = 1410401659670233110  # ID de ta catégorie
+CATEGORY_ID = 1408524289401028608  # ID de ta catégorie
 # ----------------------------------------
 
 intents = discord.Intents.default()
@@ -248,3 +248,4 @@ async def command_error(interaction: discord.Interaction, error):
 
 keep_alive()
 bot.run(token)
+
