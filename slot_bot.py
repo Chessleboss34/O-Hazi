@@ -12,7 +12,7 @@ load_dotenv()
 token = os.getenv("DISCORD_TOKEN")
 
 # ---------------- CONFIG ----------------
-CATEGORY_ID = 1408524289401028608  # ID de ta catégorie
+CATEGORY_ID = 1410401659670233110  # ID de ta catégorie
 # ----------------------------------------
 
 intents = discord.Intents.default()
@@ -52,6 +52,13 @@ async def on_ready():
         print("📌 Slash commands synchronisées")
     except Exception as e:
         print(f"Erreur sync: {e}")
+
+    # Définir l'activité du bot
+    activity = discord.Activity(
+        type=discord.ActivityType.watching,  # watching / playing / listening / streaming
+        name="by 709"
+    )
+    await bot.change_presence(status=discord.Status.online, activity=activity)
 
 # ---------------- COMMANDES ----------------
 @bot.tree.command(name="createslot", description="Créer un slot temporaire pour un utilisateur")
@@ -248,4 +255,3 @@ async def command_error(interaction: discord.Interaction, error):
 
 keep_alive()
 bot.run(token)
-
