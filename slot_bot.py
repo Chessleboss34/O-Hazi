@@ -53,10 +53,10 @@ async def on_ready():
     except Exception as e:
         print(f"Erreur sync: {e}")
 
-    # Définir l'activité du bot en streaming (avec lien guns.lol cliquable)
+    # Définir l'activité du bot en streaming (seul Twitch/YouTube créent le bouton "Regarder")
     activity = discord.Streaming(
         name="by 709",
-        url="https://guns.lol/chessito_"  # lien cliquable affiché comme "Regarder"
+        url="https://www.twitch.tv/discord"  # doit être Twitch ou YouTube
     )
     await bot.change_presence(status=discord.Status.online, activity=activity)
 
